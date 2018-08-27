@@ -22,4 +22,9 @@ public class StuServiceTest {
 
         System.out.println(sdf.format(new Date(2017, 1, 2)));
     }
+    
+    @Test
+    public void test2(){
+        System.out.println("Hello World!");
+    }
 }
