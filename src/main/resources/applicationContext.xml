@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stuService" class="cn.soft.demo.service.StuService">
+        <property name="name" value="lzd"/>
+        <!--<property name="date">-->
+            <!--<bean factory-bean="simpleDateFormat" factory-method="parse">-->
+                <!--<constructor-arg value="2018-08-21"/>-->
+            <!--</bean>-->
+        <!--</property>-->
+        <property name="date" ref="date"/>
+        
+        <property name="map">
+            <map>
+                <entry key="123">
+                    <list>
+                        <set>
+                            
+                        </set>
+                    </list>
+                </entry>
+            </map>
+        </property>
+        
+    </bean>
+
+    <bean id="simpleDateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd"/>
+    </bean>
+
+    <!---->
+    <bean id="date" class="java.util.Date">
+        <constructor-arg value="2017"/>
+        <constructor-arg value="8"/>
+        <constructor-arg value="29"/>
+    </bean>
+    
+
+</beans>
